@@ -1,8 +1,16 @@
-from string import ascii_letters, digits, punctuation, whitespace
+# The pre-processing for the arguements happens in the "WebUI.py" file.
+# so if you happen to run this file directly then follow the instrutions given below.
+
+# Pass only UPPERCASE LETTERS in the constructor for "cypher_key" arguement.
+# Pass only UPPERCASE LETTERS in encrypt and decrypt methods for the "key" agruement.
+# Pass only UPPERCASE LETTERS and WHITESPACE(" ") in the encrypt and decrypt methods
+# for the "message" and "cypher" arguements respectively.
+
+from string import ascii_uppercase
 
 class VigenereCypher():
     def __init__(self, cypher_key: str) -> None:
-        key_alphabets = list(cypher_key) + [i for i in ascii_letters+digits+punctuation+whitespace if i not in cypher_key]
+        key_alphabets = list(cypher_key) + [i for i in ascii_uppercase if i not in cypher_key]
         self.vignere_table = [list(key_alphabets)[i:] + (list(key_alphabets)[0:i]) for i in range(len(key_alphabets))]
 
     def make_keystream(self, key: str, msg_len: int) -> str:
@@ -32,7 +40,7 @@ class VigenereCypher():
         return plaintext
 
 
-if __name__ == "__main__":
-    obj = VigenereCypher("Kryptos")
-    print("Encrypted :", obj.encrypt("Hidden", "Leet Force"))
-    print("Decrypted :", obj.decrypt("Hidden", "*zqho0Njmq"))
+if __name__ == "__main__":    
+    obj = VigenereCypher("KRYPTOS")
+    print("Encrypted :", obj.encrypt("HIDDEN", "LEET FORCE"))
+    print("Decrypted :", obj.decrypt("HIDDEN", "OKUH KQENV"))
