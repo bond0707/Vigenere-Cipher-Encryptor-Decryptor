@@ -1,8 +1,8 @@
-# Vigenère Cypher Encryptor/Decryptor
+# Vigenère Cipher Encryptor/Decryptor
 
-This is a simple project that implements a **Vigenère Cypher** for encrypting plaintext and decrypting cyphertext. It is deployed on streamlit cloud [here.](https://vigenerecypher.streamlit.app/ "Vigenere Cypher Encryptor Decryptor")
+This is a simple project that implements a **Vigenère Cipher** for encrypting plaintext and decrypting ciphertext. It is deployed on Streamlit cloud [here.](https://vigenerecipher.streamlit.app/ "Vigenere Cipher Encryptor Decryptor")
 
-## About Vigenère Cyphers
+## About Vigenère Ciphers
 
 A **Vigenère Cipher** is a polyalphabetic substitution cipher where each plaintext letter is encrypted with a different substitution alphabet based on a keyword. This makes it more secure than a simple substitution cipher. To encrypt/decrypt data using this method, a **Vigenère** **Table** is used.
 
@@ -12,11 +12,11 @@ A **Vigenère Table** makes it easier to find the corresponding encrypted letter
 
 ## Important Note
 
-Whenever you encrypt/decrypt some data, a `Cypher Key` and an `Encryption Key` will be required.
+Whenever you encrypt/decrypt some data, a `Cipher Key` and an `Encryption Key` will be required.
 
-The `Cypher Key` is used to create the Vigenère Table and the `Encryption Key` is used to create the keystream.
+The `Cipher Key` is used to create the Vigenère Table and the `Encryption Key` is used to create the keystream.
 
-So choose your `Cypher Key` and `Encryption Key` wisely and keep them safe.
+So choose your `Cipher Key` and `Encryption Key` wisely and keep them safe.
 
 **If any one of them is altered/lost, your data won't be recovered.**
 
@@ -28,7 +28,7 @@ Clone this repository and install the requirements in the `requirements.txt` fil
 pip install -r requirements.txt
 ```
 
-After the installation, you can use the standard streamlit commands to run it.
+After the installation, you can use the standard Streamlit commands to run it.
 
 ```powershell
 python -m streamlit run WebUI.py --theme.base=dark
