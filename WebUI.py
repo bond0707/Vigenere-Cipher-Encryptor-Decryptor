@@ -1,12 +1,6 @@
-import clipboard
 import streamlit as st
 from VigenereCipher import VigenereCipher
 from streamlit_option_menu import option_menu
-
-
-def on_copy_click(text):
-    clipboard.copy(text)
-    st.toast("Copied to clipboard!", icon=":material/content_copy:")
 
 
 def encryptUI():
@@ -81,12 +75,7 @@ def on_encrypt_submit(cipher_key, encrypt_key, text):
     st.markdown("<h3 style='text-align: center; vertical-align: middle;'>Plaintext encrypted successfully!</h3>",
                 unsafe_allow_html=True)
 
-    col1, col2 = st.columns([0.85, 0.15], vertical_alignment="center")
-    with col1:
-        st.code(cipher_text)
-    with col2:
-        st.form_submit_button("Copy Ciphertext", on_click=on_copy_click, args=[
-                              cipher_text], use_container_width=True)
+    st.code(cipher_text)
 
 
 def on_decrypt_submit(cipher_key, encrypt_key, cipher):
@@ -101,12 +90,7 @@ def on_decrypt_submit(cipher_key, encrypt_key, cipher):
     st.markdown("<h3 style='text-align: center; vertical-align: middle;'>Ciphertext decrypted successfully!</h3>",
                 unsafe_allow_html=True)
 
-    col1, col2 = st.columns([0.85, 0.15], vertical_alignment="center")
-    with col1:
-        st.code(plain_text)
-    with col2:
-        st.form_submit_button("Copy Plaintext", on_click=on_copy_click, args=[
-                              plain_text], use_container_width=True)
+    st.code(plain_text)
 
 
 if __name__ == "__main__":
