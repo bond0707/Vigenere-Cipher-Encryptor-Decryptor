@@ -3,7 +3,7 @@ from VigenereCypher import VigenereCypher
 from streamlit_option_menu import option_menu
 
 def encryptUI():
-    st.markdown("<h1 style='text-align: center;'>Vigenère Cypher Encoder</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center;'>Vigenère Cypher Encryptor</h1>", unsafe_allow_html=True)
 
     with st.form("Encoder_Form"):
         cypher_key = st.text_input("Cypher Key")
@@ -27,7 +27,7 @@ def encryptUI():
 
 
 def decryptUI():
-    st.markdown("<h1 style='text-align: center;'>Vigenère Cypher Decoder</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center;'>Vigenère Cypher Decryptor</h1>", unsafe_allow_html=True)
 
     with st.form("Decoder_Form"):
         cypher_key = st.text_input("Cypher Key")
