@@ -1,4 +1,3 @@
-import time
 import clipboard
 import streamlit as st
 from VigenereCipher import VigenereCipher
